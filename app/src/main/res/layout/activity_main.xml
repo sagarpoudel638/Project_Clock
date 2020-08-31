@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:visibility="visible"
+    tools:context="com.example.clockapp.MainActivity"
+    tools:ignore="ExtraText">
+
+    <include layout="@layout/appbar" />
+    <DigitalClock
+
+        android:id="@+id/digitalClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="75dp"
+        android:ellipsize="none"
+        android:fontFamily="serif-monospace"
+        android:includeFontPadding="false"
+        android:padding="5dp"
+        android:singleLine="true"
+
+
+        android:textColor="@color/black"
+        android:textSize="75dp"
+        tools:ignore="UnusedAttribute" />
+
+    <TimePicker
+
+        android:id="@+id/timePicker"
+        android:layout_width="326dp"
+        android:layout_height="400dp"
+
+        android:layout_below="@+id/digitalClock"
+        android:layout_marginTop="65dp"
+android:layout_marginLeft="35dp"
+        android:timePickerMode="spinner" />
+
+    <Button
+
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timePicker"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="145dp"
+        android:layout_marginLeft="145dp"
+
+        android:onClick="setTimer"
+        android:text="Set Alarm" />
+
+
+</RelativeLayout>
